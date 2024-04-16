@@ -14,30 +14,30 @@ To implement Erosion and Dilation using Python and OpenCV.
 DEVELOPED BY: PRIYANKA.A
 REGISTER NUMBER: 212222230113
 ```
-# Import the necessary packages
+### Import the necessary packages
 ```python
 import cv2
 import numpy as np 
 import matplotlib.pyplot as plt
 ```
-# Create the Text using cv2.putText
+### Create the Text using cv2.putText
 ```python
 img1=np.zeros((100,400),dtype='uint8')
 font=cv2.FONT_HERSHEY_SIMPLEX
 cv2.putText(img1,'Priyanka',(5,70),font,2,(255),5,cv2.LINE_AA)
 ```
-# Create the structuring element
+### Create the structuring element
 ```python
 kernel=np.ones((5,5),np.uint8)
 kernel1=cv2.getStructuringElement(cv2.MORPH_CROSS,(7,7))
 ```
-# Erode the image
+### Erode the image
 ```python
 image_erode1=cv2.erode(img1,kernel1)
 plt.imshow(image_erode1)
 plt.axis("off")
 ```
-# Dilate the image
+### Dilate the image
 ```python
 image_dilate1=cv2.dilate(img1,kernel1)
 plt.imshow(image_dilate1)
